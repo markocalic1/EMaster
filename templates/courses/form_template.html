@@ -1,0 +1,7 @@
+{% for field in form %}
+<div class="col-sm-offset-2 col-sm-10">
+    <span class="text-danger small">{{ field.errors }}</span>
+</div>
+<label>{{ field.label_tag }}</label>
+<div class="col-sm-10 input-field">{{ field }}</div>
+{% endfor %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <div class="topic-title"><h2>All comments on theme: {{ title }}</h2></div>
+    <div class="col-lg-6 pull-left topic topic-author time">
+      <div class="first">
+      <span class="span-left glyphicon glyphicon-user author"> <strong>{{ first_comment_author }}</strong></span>
+      <span class="span-right time"><strong> {{ first_comment_timestamp }} </strong></span>
+      </div>
+      {% for instance in comment_list %}
+      <span class="span-left glyphicon glyphicon-user author"> <strong>{{ instance.author }}</strong></span>
+              <span class="span-right time"> {{ instance.date_created }}</span>
+
+      {% endfor %}
+    </div>
+
+
+    <div class="col-lg-6 pull-right topic">
+      <div class="comment">
+        <span class="span-right comment">Comment:   <strong> {{ first_comment|safe }}  </strong></span>
+      </div>
+
+      {% for instance in comment_list %}
+        <div class="others">
+        <span class="span-right">Comment:   {{ instance.message|safe }} </span>
+        </div>
+      {% endfor %}
+
+    </div>
+
+
+
+    <div class="col-md-12 comment-text-input new-comment">
+      <form method='POST' action="" role="form">
+        {% csrf_token %}
+        {{ add_new_comment_form | crispy }}
+        <button class="btn btn-danger btn-sm submit-btn">Add Comment</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+
+  <script src="{% static 'js/tinymce/jquery.tinymce.min.js' %}"></script>
+  <script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
+  <script src="{% static 'js/jquery-2.2.2.min.js' %}" rel="script"></script>
+  <script>tinymce.init({
+    selector: 'textarea', resize: false
+  });
+  </script>

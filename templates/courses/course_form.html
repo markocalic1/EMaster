@@ -1,0 +1,15 @@
+{% extends 'base.html '%}
+{% block contenttitle %} <div class="container-header container-header-text"><h2>- COURSE -</h2></div> {% endblock %}
+{% block album_active %} active {% endblock %}
+
+{% block content %}
+<div class="col-sm-6 col-sm-offset-3">
+    <form class="entry-form" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% include 'courses/form_template.html'%}
+        <div class="col-sm-offset-6 col-sm-12">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

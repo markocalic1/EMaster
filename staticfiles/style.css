@@ -1,0 +1,82 @@
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+ }
+ body{
+     background-color: #E8E8E8;
+     font-family: "Gotham SSm A","Gotham SSm B",Gotham,Arial,Helvetica,sans-serif;
+}
+
+p{
+     font-family:Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.container-fluid{
+    background-color: #3D3B3E;
+}
+
+
+.navbar-brand img{
+     width: 140px;
+        height: 20px;
+}
+
+#jumbotron{
+    padding-top: 250px;
+    padding-bottom: 280px;
+    background-position: 100% 40%;
+    color: #f7f3e3;
+}
+#jumbotron .container.text-center{
+    padding-top: 15px;
+    background: #11272D;
+}
+#jumbotron p{
+    font-size: 2em;
+}
+
+.well{
+    text-align: justify;
+}
+.well span{
+    font-size: 25px;
+    padding-bottom: 10px;
+
+}
+
+#main-container p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.row{
+    padding-bottom: 50px;
+}
+.row p{
+    font-size: 18px;
+    text-align: justify;
+    color: #333333;
+}
+
+.centered-form{
+	margin-top: 100px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+/* forum CSS*/
+.test{
+    padding-left: 250px;
+    background: red;
+}

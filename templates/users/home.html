@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- jumbotron -->
+<div class="jumbotron" id ="jumbotron">
+    <div class="container text-center">
+        <p>eMasters is an online education platform intended for learning basic and advanced use of IT technologies.</p>
+    </div>
+</div>
+
+<div class="container-header"><h2>What we do?</h2></div>
+<br>
+<div class="container text-center" id="main-container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="well">
+                <img src="{% static 'img/programming.jpeg' %}" class="img-responsive" alt="Online education">
+                <h3>Online education</h3>
+                <p>Access learning modules for basic usage of SQL databases, Python and Django. Customized for for everyone who intends to work on various projects using the specified technologies.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="well">
+                <img src="{% static 'img/radionice.jpg' %}" class="img-responsive" alt="Workshops">
+                <h3>Workshops</h3>
+                <p>Weekly workshops held by experienced instructors. Through the workshops, the participants become familiar with practical work and basic web development. Participants gain experience working together in teams in order to finnish a common project.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="well">
+                <img src="{% static 'img/online-test.jpg' %}" class="img-responsive" alt="Online tests">
+                <h3>Online tests</h3>
+                <p>Online tests give feedback about the participants knowledge level. For every mastered test of a module, a certificat is granted.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
